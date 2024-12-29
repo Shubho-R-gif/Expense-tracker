@@ -1,0 +1,228 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f4f4f9, #ffffff);
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  color: #4a90e2;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Card Component */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin: 0 0 20px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Balance Card */
+.balance-card .balance-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.balance {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.expense-summary {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.expense-summary span {
+  font-weight: bold;
+  color: #ff5722;
+  font-size: 1rem;
+}
+
+/* Input Fields */
+.input {
+  width: 100%;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+}
+
+.input:focus::placeholder {
+  color: #4a90e2;
+  opacity: 0.7;
+}
+
+.input:invalid {
+  border-color: #e53935;
+  box-shadow: 0 0 8px rgba(229, 57, 53, 0.5);
+}
+
+.input:valid {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #357abd;
+}
+
+.primary-btn:active {
+  transform: scale(0.97);
+}
+
+/* Expense List */
+.expenses-card {
+  max-height: 400px;
+  overflow-y: auto;
+  border-top: 2px solid #f0f0f0;
+  padding-top: 15px;
+}
+
+.expense-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.expense-item:hover {
+  transform: scale(1.02);
+  background-color: #f5f5f5;
+}
+
+.expense-label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.expense-amount {
+  color: #d32f2f;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.no-transactions {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .balance {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+  }
+
+  .expense-item {
+    padding: 10px;
+  }
+
+  .expense-label,
+  .expense-amount {
+    font-size: 0.9rem;
+  }
+}  
