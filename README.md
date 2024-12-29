@@ -39,7 +39,7 @@ The app automatically updates and displays the total balance based on your trans
 ## Screenshots
 
 ## **Main Interface**
-![Main Interface](expense-tracker.jpeg)
+![Main Interface](src/assets/expense-tracker.jpeg)
 
 ---
 
